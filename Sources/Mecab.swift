@@ -22,7 +22,7 @@ public protocol Tokenzier {
     func tokenize(string str: String) throws -> [T]
 }
 
-public class Mecab: Tokenzier {
+open class Mecab: Tokenzier {
     
     let mecab: OpaquePointer
     var mutex = pthread_mutex_t()
@@ -34,7 +34,7 @@ public class Mecab: Tokenzier {
         pthread_mutex_init(&mutex, nil)
     }
     
-    public func tokenize(string str: String) throws -> [Node] {
+    open func tokenize(string str: String) throws -> [Node] {
         var nodes: [Node] = []
         
         pthread_mutex_lock(&mutex)

@@ -16,11 +16,11 @@ public protocol TokenNode {
 
 extension Node {
     public enum `Type`: Int {
-        case Normal = 0
-        case Unknown = 1
-        case BeginOfSentence = 2
-        case EndOfSentence = 3
-        case EndOfNBestEnumeration = 4
+        case normal = 0
+        case unknown = 1
+        case beginOfSentence = 2
+        case endOfSentence = 3
+        case endOfNBestEnumeration = 4
     }
 }
 
@@ -67,7 +67,7 @@ public struct Node: TokenNode, CustomStringConvertible {
         if features.count == 0 {
             throw MecabError.nodeParseError
         }
-        self.isBosEos = type == .EndOfSentence || type == .BeginOfSentence
+        self.isBosEos = type == .endOfSentence || type == .beginOfSentence
         self.type = type
         self.posId = Int(node.pointee.posid)
     }
