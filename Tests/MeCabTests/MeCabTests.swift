@@ -83,4 +83,26 @@ class MeCabTests: XCTestCase {
         XCTAssertEqual(expected.count, bodyNodes.count)
     }
     
+    func testNaistDictionary() throws {
+        
+        let m = try Mecab(dictionaryPath: "/usr/local/lib/mecab/dic/naist-jdic")
+        
+        let nodes = try m.tokenize(string: "太郎は次郎が持っている本を花子に渡した。")
+        
+        // MARK: Demo
+        
+        for n in nodes.filter({ !$0.isBosEos }) {
+            print(n.surface, n.features, n.posId)
+        }
+        
+        // MARK: Test
+        
+        let expected = "太郎 は 次郎 が 持っ て いる 本 を 花 子 に 渡し た 。".characters.split(separator: " ").map(String.init)
+        let bodyNodes = nodes.filter({ !$0.isBosEos })
+        
+        XCTAssertEqual(expected, bodyNodes.map{ $0.surface })
+        
+        XCTAssertEqual(expected.count, bodyNodes.count)
+    }
+    
 }

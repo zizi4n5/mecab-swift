@@ -34,6 +34,14 @@ open class Mecab: Tokenzier {
         pthread_mutex_init(&mutex, nil)
     }
     
+    public init(dictionaryPath path: String) throws {
+        guard let mecab = mecab_new2(" -d \(path)") else {
+            throw MecabError.mecabInitializeError
+        }
+        self.mecab = mecab
+        pthread_mutex_init(&mutex, nil)
+    }
+    
     open func tokenize(string str: String) throws -> [Node] {
         var nodes: [Node] = []
         
