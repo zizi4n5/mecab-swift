@@ -7,9 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2814DFF81F592BEC0065BB06 /* libmecab.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2814DFF71F592BEC0065BB06 /* libmecab.tbd */; };
 		5202D3E21E011D2800FCA024 /* MeCabTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5202D3E11E011D2800FCA024 /* MeCabTests.swift */; };
-		5271EADC1C310AE5004CA6EC /* libmecab.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5271EADB1C310AE5004CA6EC /* libmecab.a */; };
-		5271EADE1C310B24004CA6EC /* libmecab.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = 5271EADB1C310AE5004CA6EC /* libmecab.a */; };
 		5271EAE01C310B6A004CA6EC /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5271EADF1C310B6A004CA6EC /* libstdc++.tbd */; };
 		5271EAE21C310B74004CA6EC /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5271EAE11C310B74004CA6EC /* libiconv.tbd */; };
 		52994AE71C2D362C00156C30 /* MeCab.h in Headers */ = {isa = PBXBuildFile; fileRef = 52994AE61C2D362C00156C30 /* MeCab.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -35,15 +34,14 @@
 			dstPath = "";
 			dstSubfolderSpec = 16;
 			files = (
-				5271EADE1C310B24004CA6EC /* libmecab.a in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2814DFF71F592BEC0065BB06 /* libmecab.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libmecab.tbd; path = usr/lib/libmecab.tbd; sourceTree = SDKROOT; };
 		5202D3E11E011D2800FCA024 /* MeCabTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeCabTests.swift; sourceTree = "<group>"; };
-		5271EADB1C310AE5004CA6EC /* libmecab.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libmecab.a; path = /usr/local/lib/libmecab.a; sourceTree = "<absolute>"; };
 		5271EADF1C310B6A004CA6EC /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		5271EAE11C310B74004CA6EC /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
 		52965FB61C82FA3A00E35C64 /* LinuxMain.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinuxMain.swift; sourceTree = "<group>"; };
@@ -63,7 +61,7 @@
 			files = (
 				5271EAE21C310B74004CA6EC /* libiconv.tbd in Frameworks */,
 				5271EAE01C310B6A004CA6EC /* libstdc++.tbd in Frameworks */,
-				5271EADC1C310AE5004CA6EC /* libmecab.a in Frameworks */,
+				2814DFF81F592BEC0065BB06 /* libmecab.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,7 +89,7 @@
 			children = (
 				5271EAE11C310B74004CA6EC /* libiconv.tbd */,
 				5271EADF1C310B6A004CA6EC /* libstdc++.tbd */,
-				5271EADB1C310AE5004CA6EC /* libmecab.a */,
+				2814DFF71F592BEC0065BB06 /* libmecab.tbd */,
 			);
 			name = lib;
 			sourceTree = "<group>";
